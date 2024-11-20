@@ -25,17 +25,17 @@ import java.util.HashMap;
 public class TwoSum {
 
     public int[] twoSum(int[] nums, int target) {
-        var map = new HashMap<Integer, Integer>();
+        final var diffIndexes = new HashMap<Integer, Integer>();
 
         for (var i = 0; i < nums.length; i++) {
-            var diff = target - nums[i];
-            var diffIndex = map.get(diff);
+            final var diff = target - nums[i];
+            final var diffIndex = diffIndexes.get(diff);
 
-            if (diffIndex == null) {
-                map.put(nums[i], i);
-            } else {
+            if (diffIndex != null) {
                 return new int[] { i, diffIndex };
             }
+
+            diffIndexes.put(nums[i], i);
         }
 
         throw new IllegalStateException();
