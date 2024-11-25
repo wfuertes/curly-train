@@ -1,7 +1,5 @@
 package dev.wfuertes.arrays;
 
-import java.util.stream.IntStream;
-
 /**
  * https://leetcode.com/problems/maximum-product-subarray/description/
  * 
